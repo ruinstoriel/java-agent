@@ -29,7 +29,11 @@
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
     </properties>
 
+<dependencies>
+    <!-- https://mvnrepository.com/artifact/org.ow2.asm/asm -->
 
+
+</dependencies>
     <build>
         <plugins>
             <plugin>
@@ -41,7 +45,12 @@
                     <compilerArgs>
                         <arg>--add-exports</arg>
                         <arg>jdk.attach/com.sun.tools.attach=ALL-UNNAMED</arg>
+                        <arg>--add-exports</arg>
+                        <arg>java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED</arg>
+                        <arg>--add-exports</arg>
+                        <arg>java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED</arg>
                     </compilerArgs>
+
                 </configuration>
             </plugin>
             <plugin>

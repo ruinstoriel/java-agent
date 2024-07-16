@@ -16,7 +16,6 @@ public class Agent {
         @Override
         public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined, ProtectionDomain protectionDomain, byte[] classfileBuffer) {
             // 修改字节码的逻辑
-            System.out.println("----"+className);
             if (className.equals("org/example/DemoController")) {
                 System.out.println("demo");
             }
